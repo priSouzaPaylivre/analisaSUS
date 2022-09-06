@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANALISA SUS</title>
+  </head>
+
+  <body class="bg-[#38424b] text-white">
+    <div class="bg-white flex mt-4 justify-center text-black h-20 items-center">
+      <h1 class="text-3xl font-bold">ANALISA SUS</h1>
+      <br />
+    </div>
+
+    <!-- Primeiro Form -->
+
+    <div class="w-[97%] sm:w-full mx-auto max-w-7xl py-6 sm:px-6">
+      <h1 class="mb-1 text-lg text-gray">Filtro</h1>
+      <div class="flex flex-col sm:flex-row justify-between">
+        <input
+          class="sm:w-1/4 mb-3 px-3 py-1.5 rounded-md text-black"
+          type="text"
+          placeholder="user_id"
+        />
+
+        <input
+          class="sm:w-1/4 mb-3 px-3 py-1.5 rounded-md text-black"
+          type="text"
+          placeholder="merchant_id"
+        />
+
+        <input
+          class="sm:w-1/4 mb-3 px-3 py-1.5 rounded-md text-black"
+          type="text"
+          placeholder="transaction_id"
+        />
+
+        <div>
+          <button class="text-sm px-3 py-2 rounded-md bg-white text-black">
+            LIMPAR
+          </button>
+          <button class="text-sm px-3 py-2 rounded-md bg-[#215aff]">
+            BUSCAR
+          </button>
+        </div>
+      </div>
+
+      <!-- Segundo form -->
+
+      <h1 class="mb-1 text-lg text-gray">Filtro</h1>
+      <div class="bg-gray-500 rounded-md p-3 text-center grid grid-cols-2">
+        <div class="">
+          <input
+            class="sm:w-1/4 mb-3 px-3 py-1.5 rounded-md text-black"
+            type="text"
+            placeholder="user_id"
+          />
+
+          <input
+            class="sm:w-1/4 mb-3 px-3 py-1.5 rounded-md text-black"
+            type="text"
+            placeholder="merchant_id"
+          />
+
+          <input
+            class="sm:w-1/4 mb-3 px-3 py-1.5 rounded-md text-black"
+            type="text"
+            placeholder="transaction_id"
+          />
+
+          <input
+            class="sm:w-1/4 mb-3 px-3 py-1.5 rounded-md text-black"
+            type="text"
+            placeholder="user_id"
+          />
+
+          <input
+            class="sm:w-1/4 mb-3 px-3 py-1.5 rounded-md text-black"
+            type="text"
+            placeholder="merchant_id"
+          />
+
+          <input
+            class="sm:w-1/4 mb-3 px-3 py-1.5 rounded-md text-black"
+            type="text"
+            placeholder="transaction_id"
+          />
+
+          <div>
+            <button class="text-sm px-3 py-2 rounded-md bg-white text-black">
+              LIMPAR
+            </button>
+            <button class="text-sm px-3 py-2 rounded-md bg-[#215aff]">
+              BUSCAR
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Table -->
+
+      <div class="hidden sm:flex">
+        <div
+          class="mt-8 flex flex-col justify-center bg-gray-300 text-black bg-white shadow-md rounded-md mx-auto mt-4 overflow-auto"
+        >
+          <table>
+            <thead>
+              <tr>
+                <th
+                  class="p-2 border-b border-gray-200 bg-gray-100 text-left text-xs font-medium text-gray-600 uppercase tracking-wider"
+                >
+                  Order
+                </th>
+                <th
+                  class="p-2 border-b border-gray-200 bg-gray-100 text-left text-xs font-medium text-gray-600 uppercase tracking-wider"
+                >
+                  OrderAttempt
+                </th>
+                <th
+                  class="p-2 border-b border-gray-200 bg-gray-100 text-left text-xs font-medium text-gray-600 uppercase tracking-wider"
+                >
+                  OrderStatus
+                </th>
+                <th
+                  class="p-2 border-b border-gray-200 bg-gray-100 text-left text-xs font-medium text-gray-600 uppercase tracking-wider"
+                >
+                  OrderTaxData
+                </th>
+                <th
+                  class="p-2 border-b border-gray-200 bg-gray-100 text-left text-xs font-medium text-gray-600 uppercase tracking-wider"
+                >
+                  OrderType
+                </th>
+                <th
+                  class="p-2 border-b border-gray-200 bg-gray-100 text-left text-xs font-medium text-gray-600 uppercase tracking-wider"
+                >
+                  Partner
+                </th>
+                <th
+                  class="p-2 border-b border-gray-200 bg-gray-100 text-left text-xs font-medium text-gray-600 uppercase tracking-wider"
+                >
+                  User
+                </th>
+                <th
+                  class="p-2 border-b border-gray-200 bg-gray-100 text-left text-xs font-medium text-gray-600 uppercase tracking-wider"
+                >
+                  Deposit
+                </th>
+                <th
+                  class="p-2 border-b border-gray-200 bg-gray-100 text-left text-xs font-medium text-gray-600 uppercase tracking-wider"
+                >
+                  Withdrawal
+                </th>
+                <th
+                  class="p-2 border-b border-gray-200 bg-gray-100 text-left text-xs font-medium text-gray-600 uppercase tracking-wider"
+                >
+                  Transaction
+                </th>
+                <th
+                  class="p-2 border-b border-gray-200 bg-gray-100 text-left text-xs font-medium text-gray-600 uppercase tracking-wider"
+                >
+                  Callback
+                </th>
+                <th
+                  class="p-2 border-b border-gray-200 bg-gray-100 text-left text-xs font-medium text-gray-600 uppercase tracking-wider"
+                >
+                  Quotes
+                </th>
+                <th
+                  class="p-2 border-b border-gray-200 bg-gray-100 text-left text-xs font-medium text-gray-600 uppercase tracking-wider"
+                >
+                  BankAccount
+                </th>
+                <th
+                  class="p-2 border-b border-gray-200 bg-gray-100 text-left text-xs font-medium text-gray-600 uppercase tracking-wider"
+                >
+                  DocumentValidation
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  465
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  1
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  38
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  465
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  1
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  38
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  465
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  1
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  38
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+              </tr>
+              <tr>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  465
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  1
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  38
+                </td>
+                <td
+                  class="bg-white divide-y divide-gray-200 font-mono text-sm text-gray-700 p-2 border-b border-gray-200 text-center"
+                >
+                  --
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div
+            class="p-2 border-b border-gray-200 bg-gray-100 text-center text-xs font-medium text-gray-600 uppercase"
+          >
+            <a class="px-1" href="#">1</a>
+            <a class="px-1" href="#">2</a>
+            <a class="px-1" href="#">3</a>
+            <a class="px-1" href="#">4</a>
+            <a class="px-1" href="#">5</a>
+            <a class="px-1" href="#">></a>
+            <a class="px-1" href="#">>></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- List responsivo -->
+
+      <div class="sm:hidden flex flex-wrap">
+        <div
+          class="w-full bg-white mt-8 rounded-md mx-auto text-black overflow-auto"
+        >
+          <ul>
+            <li class="p-2">Order:</li>
+            <li class="p-2">OrderAttempt:</li>
+            <li class="p-2">OrderStatus:</li>
+            <li class="p-2">OrderTaxData:</li>
+            <li class="p-2">OrderType:</li>
+            <li class="p-2">Partner:</li>
+            <li class="p-2">User:</li>
+            <li class="p-2">Deposit:</li>
+            <li class="p-2">Withdrawal:</li>
+            <li class="p-2">Transaction:</li>
+            <li class="p-2">Callback:</li>
+            <li class="p-2">Quotes:</li>
+            <li class="p-2">BankAccount:</li>
+            <li class="p-2">DocumentValidation:</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sm:hidden flex flex-wrap">
+        <div
+          class="w-full bg-white mt-8 rounded-md mx-auto text-black overflow-auto"
+        >
+          <ul>
+            <li class="p-2">Order:</li>
+            <li class="p-2">OrderAttempt:</li>
+            <li class="p-2">OrderStatus:</li>
+            <li class="p-2">OrderTaxData:</li>
+            <li class="p-2">OrderType:</li>
+            <li class="p-2">Partner:</li>
+            <li class="p-2">User:</li>
+            <li class="p-2">Deposit:</li>
+            <li class="p-2">Withdrawal:</li>
+            <li class="p-2">Transaction:</li>
+            <li class="p-2">Callback:</li>
+            <li class="p-2">Quotes:</li>
+            <li class="p-2">BankAccount:</li>
+            <li class="p-2">DocumentValidation:</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Scenarios -->
+
+      <div class="mt-8 bg-white text-black rounded-md py-4">
+        <dl>
+          <div class="px-4">
+            <dt class="font-bold">Cenário 1</dt>
+            <dd class="mb-5">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo
+              voluptatibus repellat pariatur iure maiores repellendus quas? Quam
+              voluptatibus maiores vitae dolorem? Laborum ab libero facilis non,
+              itaque veniam odio corporis.
+            </dd>
+          </div>
+          <div class="bg-gray-100 px-4">
+            <dt class="font-bold">Resultado da análise</dt>
+            <dd class="mb-5">
+              Lorem, iddsum dolor sit amet consectetur adipisicing elit.
+              Molestiae corrupti deserunt quisquam culpa earum libero
+              dignissimos placeat repellendus reiciendis blanditiis, ipsam esse
+              voluptates soluta illo provident ut suscipit veritatis nostrum!
+            </dd>
+          </div>
+          <div class="px-4">
+            <dt class="font-bold">Solução</dt>
+            <dd class="mb-5">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+              optio culpa dignissimos error perspiciatis animi magni pariatur
+              alias sint adipisci nihil saepe laudantium, aliquam mollitia quod!
+              Debitis ipsum dolorem inventore?
+            </dd>
+          </div>
+        </dl>
+
+        <!-- Pagination -->
+
+        <div
+          class="p-2 border-b border-gray-200 bg-gray-100 text-left text-xs font-medium text-gray-600 uppercase tracking-wider flex justify-center"
+        >
+          <a class="px-1" href="#">1</a>
+          <a class="px-1" href="#">2</a>
+          <a class="px-1" href="#">3</a>
+          <a class="px-1" href="#">4</a>
+          <a class="px-1" href="#">5</a>
+          <a class="px-1" href="#">></a>
+          <a class="px-1" href="#">>></a>
+        </div>
+      </div>
+
+      <!-- Message Jira/Zend -->
+
+      <div class="mt-8 bg-white text-black rounded-md p-4">
+        <div>
+          <dl>
+            <div>
+              <dt class="font-bold">Mensagem Jira</dt>
+              <dd class="mb-5">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo
+                voluptatibus repellat pariatur iure maiores repellendus quas?
+                Quam voluptatibus maiores vitae dolorem? Laborum ab libero
+                facilis non, itaque veniam odio corporis.
+              </dd>
+            </div>
+            <div>
+              <dt class="font-bold">Mensagem Zendesk</dt>
+              <dd class="mb-5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                atque eaque quis nam aliquam impedit consequuntur numquam,
+                molestiae recusandae voluptatum ipsum magni inventore rem
+                voluptas cumque quia? Voluptatem, nobis cumque!
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
